@@ -1,0 +1,24 @@
+.biodata {
+    background-color:lightblue;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+}  
+.container h3,p{
+    display: inline-block;
+} 
+.container{
+    display: flex;
+    flex-direction: column;
+    display:inline-block;
+}
+footer
+{
+    width:auto;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    text-align: center;
+}
