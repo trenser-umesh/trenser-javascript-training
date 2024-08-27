@@ -27,9 +27,11 @@ function formValidation(event) {
     }
     if (password === "" || !(/^(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password))) {
         passwordError.textContent = "Password criteria were not met properly";
+        validFlag = false;
     }
     if (age === "" || !(/^(?!0$)[1-9]\d*$/.test(age))) {
         ageError.textContent = "Please enter a valid age";
+        validFlag = false;
     }
     if (address === "") {
         addressError.textContent = "Please enter the address.";
@@ -41,6 +43,7 @@ function formValidation(event) {
     }
     if (phone === "" || !(/^\d{10}$/.test(phone))) {
         phoneError.textContent = "Please enter a valid phone number.";
+        validFlag = false;
     }
     return validFlag;
 }
