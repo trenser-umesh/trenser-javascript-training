@@ -1,12 +1,11 @@
-h1{
+h1 {
     text-align: center;
-    background-color: aqua;
-    
+    background-color: aqua; 
 }
-.container{
+.container {
     text-align: center;
 }
-.btn{
+.btn {
     padding-top: 5%;
     text-align: center;
 }
