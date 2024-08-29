@@ -20,15 +20,23 @@ body {
 
 #btn {
     padding: 5px 15px;
-    border: 1px solid #9dd1ff;
+    border: 1px solid #797777;
+    background-color: #a8a7a7;
     border-radius: 10px;
-    color: #348efe;
-    display: inline-block;
+    color: #1d1c1c;
+    cursor: not-allowed;
+    opacity: 0.3;
     padding: 12px 25px;
     margin: 5% 35%;
 }
 
-#btn:hover {
+#btn:enabled {
+    background-color: rgb(194, 222, 248);
+    opacity: 1;
+    cursor: pointer;
+}
+
+#btn:enabled:hover {
     background-color: rgb(162, 207, 247);
     transition: all 350ms ease-in-out;
 }
