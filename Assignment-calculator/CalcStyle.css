@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(203, 233, 233);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.calculator {
+  background-color: rgb(171, 182, 185);
+  width: 350px;
+  height: 100%;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.buttons-panel {
+  background-color: rgb(171, 182, 185);
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px 0 10px 0;
+}
+
+input {
+  width: 335px;
+  height: 70px;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+}
+
+#AC-btn {
+  width: 165px;
+}
