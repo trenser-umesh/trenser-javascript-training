@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="editFormStyle.css" />
+  </head>
+
+  <body>
+    <main class="form-panel">
+      <form name="reg-form" onsubmit="formSubmission(event)">
+        <h1>Updation Form</h1>
+        <div class="elements">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter the name" />
+        </div>
+        <div class="error-display">
+          <span id="name-error" class="error"></span>
+        </div>
+        <div class="elements">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter the password"
+          />
+        </div>
+        <div class="error-display">
+          <span id="password-error" class="error"></span>
+        </div>
+        <div class="elements">
+          <label for="profession">Profession</label>
+          <input
+            type="text"
+            id="profession"
+            placeholder="Enter your profession"
+          />
+        </div>
+        <div class="error-display">
+          <span id="profession-error" class="error"></span>
+        </div>
+        <div class="elements">
+          <label for="bio">Bio</label>
+          <textarea
+            name="bio"
+            id="bio"
+            rows="3"
+            placeholder="Enter your bio"
+          ></textarea>
+        </div>
+        <div class="error-display">
+          <span id="bio-error" class="error"></span>
+        </div>
+        <div class="elements">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter the email" />
+        </div>
+        <div class="error-display">
+          <span id="email-error" class="error"></span>
+        </div>
+        <button type="submit" id="btn">SUBMIT</button>
+      </form>
+    </main>
+    <script src="editFormScript.js"></script>
+  </body>
+</html>

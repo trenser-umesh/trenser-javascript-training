@@ -1,0 +1,138 @@
+.profile-picture {
+  width: 100px;
+  height: 95px;
+  border-radius: 50%;
+  border: 1px solid rgb(7, 7, 197);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  background-image: radial-gradient(#39a7b8, #5d74be);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 13px rgba(0, 0, 0, 1);
+  width: 300px;
+  margin: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.card-header {
+  background-color: #4071f4;
+}
+
+.card-content {
+  padding: 5px 0 5px 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profession {
+  margin: 5px 0 15px;
+  color: #777;
+  font-size: 18px;
+}
+
+.bio {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.email {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.socialmedia-icons {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.subscribe-button,
+.message-button {
+  border: none;
+  width: 100px;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #007bff;
+  padding: 7px 15px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.message-button {
+  background-color: #28a745;
+}
+
+.subscribe-button:hover,
+.message-button:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all ease-in;
+  transition-duration: 120ms;
+}
+
+.delete-btn,
+.edit-btn {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #646463;
+  border: none;
+  color: white;
+  margin: 10px;
+}
+
+.delete-btn {
+  background-color: rgb(228, 42, 42);
+}
+
+.container-edit-delete {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.icons {
+  width: 70px;
+  height: 50px;
+  margin-bottom: -10px;
+}
