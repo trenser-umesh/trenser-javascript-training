@@ -103,13 +103,13 @@ function emailValidation() {
 }
 
 function formSubmission(event) {
+  event.preventDefault();
   if (validation()) {
     const userName = nameElement.value;
     const password = passwordElement.value;
     const profession = professionElement.value;
     const bio = bioElement.value;
     const email = emailElement.value;
-    event.preventDefault();
     const userObject = {
       name: userName,
       password: password,
@@ -117,7 +117,6 @@ function formSubmission(event) {
       bio: bio,
       email: email,
     };
-    console.log(userObject);
     fetch(`https://crudcrud.com/api/a1c7e2f11f4645db8eae360435521eb5/users`, {
       method: "POST",
       headers: {
