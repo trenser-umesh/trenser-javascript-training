@@ -138,7 +138,6 @@ body {
   width: 165px;
   height: 110px;
   border-radius: 3px;
- 
 }
 
 .ingredient-text-container {
@@ -271,6 +270,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .nutrient-list-container {
   box-shadow: 0 0 7px #0000004d;
   height: 550px;
@@ -281,7 +281,8 @@ body {
   background-color: #fff;
 }
 
-.label-value-container,.calorie-container {
+.label-value-container,
+.calorie-container {
   display: flex;
   width: 300px;
   justify-content: space-between;
@@ -301,14 +302,14 @@ body {
 }
 
 .instruction-panel {
-  width: 500px;
+  width: 100%;
   height: auto;
   background-color: #ffffff;
   background-size: cover;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   box-shadow: 0 0 7px #0000004d;
   transition: transform 0.3s ease-in-out;
   font-size: 20px;
@@ -321,6 +322,12 @@ body {
   transform: translateY(3px);
   transition: all ease-in;
   transition-duration: 100ms;
+}
+
+.instruction-image {
+  width: 400px;
+  height: 200px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 750px) {

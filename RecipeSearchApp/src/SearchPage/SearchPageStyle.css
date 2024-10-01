@@ -312,3 +312,7 @@ h4 {
     flex-wrap: wrap;
   }
 }
+
+.not-found-message {
+  text-align: center;
+}

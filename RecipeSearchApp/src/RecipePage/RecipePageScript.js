@@ -195,7 +195,7 @@ function createInstructionSection(url) {
   instructionPanel.appendChild(instructionImage);
   instructionPanel.appendChild(cardClickingInstruction);
   instructionPanel.addEventListener("click", () => {
-    window.location.href = url;
+    window.open(url,'_blank');
   });
   instructionsSection.appendChild(instructionPanel);
   return instructionsSection;
