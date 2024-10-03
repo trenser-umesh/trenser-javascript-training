@@ -47,10 +47,8 @@ function createHeadSection(dataArray) {
 
 function createContentSection(dataArray) {
   const contentSection = createSectionContainer("content-section");
-
   const ingredientsSection = createIngredientsSection(dataArray.ingredients);
   contentSection.appendChild(ingredientsSection);
-
   const instructionSection = createInstructionSection(dataArray.url);
   contentSection.appendChild(instructionSection);
   const nutrientSection = createNutrientSection(dataArray);
@@ -66,7 +64,6 @@ function createLabelContainer(dataArray) {
     "main-heading"
   );
   labelContainer.appendChild(labelElement);
-
   const itemInformationContainer = divContainerCreation(
     "item-information-container"
   );
@@ -127,7 +124,6 @@ function createIngredientsSection(ingredients) {
 
 function createIngredientCard(item) {
   const ingredientCard = divContainerCreation("ingredient-card");
-
   const imageContainer = divContainerCreation("ingredient-image-container");
   const ingredientImage = imageElementCreation(
     item.image,
@@ -136,7 +132,6 @@ function createIngredientCard(item) {
   );
   imageContainer.appendChild(ingredientImage);
   ingredientCard.appendChild(imageContainer);
-
   const labelContainer = divContainerCreation("ingredient-text-container");
   const ingredientLabel = createHeadingElement(
     "h3",
@@ -144,7 +139,6 @@ function createIngredientCard(item) {
     "ingredient-text"
   );
   labelContainer.appendChild(ingredientLabel);
-
   const weightCategoryContainer = divContainerCreation(
     "weight-category-container"
   );
@@ -160,7 +154,6 @@ function createIngredientCard(item) {
       "category-element"
     )
   );
-
   labelContainer.appendChild(weightCategoryContainer);
   ingredientCard.appendChild(labelContainer);
   return ingredientCard;
@@ -174,19 +167,16 @@ function createInstructionSection(url) {
     "instruction-label"
   );
   instructionsSection.appendChild(instructionLabel);
-
   const instructionPanel = divContainerCreation("instruction-panel");
   const instructionCardFirstText = paragraphElementCreation(
     "Ready for some kitchen fun ?",
     "instruction-card-text"
   );
-
   const instructionImage = imageElementCreation(
     "../../assets/Images/cooks-professional set.jpg",
     "cooking image",
     "instruction-image"
   );
-
   const cardClickingInstruction = paragraphElementCreation(
     "Click this card and get cooking with the full Instructions !",
     "card-clicking-instruction"
@@ -195,7 +185,7 @@ function createInstructionSection(url) {
   instructionPanel.appendChild(instructionImage);
   instructionPanel.appendChild(cardClickingInstruction);
   instructionPanel.addEventListener("click", () => {
-    window.open(url,'_blank');
+    window.open(url, "_blank");
   });
   instructionsSection.appendChild(instructionPanel);
   return instructionsSection;
@@ -215,13 +205,11 @@ function createNutrientSection(dataArray) {
   );
   nutrientHeadingContainer.appendChild(nutrientFactLabel);
   nutrientFactContainer.appendChild(nutrientHeadingContainer);
-
   const chartContainer = divContainerCreation("chart-container");
   const canvas = createCanvasElement("calories-chart");
   chartContainer.appendChild(canvas);
   createNutrientChart(canvas, dataArray);
   nutrientFactContainer.appendChild(chartContainer);
-
   const nutrientInfoContainer = divContainerCreation("nutrient-info-container");
   const fatElement = paragraphElementCreation(
     `Fat : ${Math.round(dataArray.totalNutrients.FAT.quantity)} g`,
@@ -240,9 +228,7 @@ function createNutrientSection(dataArray) {
   nutrientInfoContainer.appendChild(carbsElement);
   nutrientInfoContainer.appendChild(proteinElement);
   nutrientFactContainer.appendChild(nutrientInfoContainer);
-
   nutrientSection.appendChild(nutrientFactContainer);
-
   const nutrientListContainer = createTotalNutrients(dataArray);
   nutrientSection.appendChild(nutrientListContainer);
   return nutrientSection;
@@ -305,46 +291,6 @@ function createNutrientChart(canvas, dataArray) {
   });
 }
 
-function createSectionContainer(className) {
-  const section = document.createElement("section");
-  section.className = className;
-  return section;
-}
-
-function divContainerCreation(className) {
-  const div = document.createElement("div");
-  div.className = className;
-  return div;
-}
-
-function imageElementCreation(src, alt, className) {
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = alt;
-  img.className = className;
-  return img;
-}
-
-function createHeadingElement(tag, text, className) {
-  const heading = document.createElement(tag);
-  heading.textContent = text;
-  heading.className = className;
-  return heading;
-}
-
-function paragraphElementCreation(text, className) {
-  const p = document.createElement("p");
-  p.textContent = text;
-  p.className = className;
-  return p;
-}
-
-function createCanvasElement(className) {
-  const canvas = document.createElement("canvas");
-  canvas.className = className;
-  return canvas;
-}
-
 function createLabelValueContainer(label, value) {
   const container = divContainerCreation("label-value-container");
   const labelElement = paragraphElementCreation(label, "label-element");
@@ -352,4 +298,44 @@ function createLabelValueContainer(label, value) {
   container.appendChild(labelElement);
   container.appendChild(valueElement);
   return container;
+}
+
+function divContainerCreation(className) {
+  const divContainer = document.createElement("div");
+  divContainer.className = className;
+  return divContainer;
+}
+
+function imageElementCreation(src, alt, className) {
+  const imgElement = document.createElement("img");
+  imgElement.src = src;
+  imgElement.alt = alt;
+  imgElement.className = className;
+  return imgElement;
+}
+
+function createSectionContainer(className) {
+  const sectionContainer = document.createElement("section");
+  sectionContainer.className = className;
+  return sectionContainer;
+}
+
+function createCanvasElement(className) {
+  const canvasElement = document.createElement("canvas");
+  canvasElement.className = className;
+  return canvasElement;
+}
+
+function paragraphElementCreation(text, className) {
+  const paragraphElement = document.createElement("p");
+  paragraphElement.textContent = text;
+  paragraphElement.className = className;
+  return paragraphElement;
+}
+
+function createHeadingElement(tag, text, className) {
+  const headingElement = document.createElement(tag);
+  headingElement.textContent = text;
+  headingElement.className = className;
+  return headingElement;
 }

@@ -33,6 +33,7 @@
 .main-heading-container {
   margin-left: 20px;
 }
+
 #main-heading {
   font-size: 25px;
   letter-spacing: 8px;
@@ -188,6 +189,7 @@ body {
   transition: all ease-in;
   transition-duration: 150ms;
 }
+
 #card-section {
   display: flex;
   flex-direction: column;
