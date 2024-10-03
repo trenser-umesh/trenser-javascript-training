@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SearchPageStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Search Page</title>
+  </head>
+  <body>
+    <div class="top-panel">
+      <div class="main-heading-container">
+        <h1 id="main-heading">DELICIOUS RECIPE</h1>
+        <h2 id="caption">
+          "Find Your Next Favorite Dish: Search, Cook, Savor!"
+        </h2>
+      </div>
+    </div>
+    <div class="marquee-container">
+      <p class="marquee-text">
+        "Looking for a healthy twist? Try our Quinoa & Veggie stir-fry -
+        low-carb, high-protein goodness!"
+      </p>
+    </div>
+    <section class="content-section">
+      <div class="search-panel">
+        <p id="text-info">Search For A Dish And Get The Recipe</p>
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Type your dish name here..."
+        />
+        <button class="search-btn" onclick="searchRecipe()">SEARCH</button>
+        <div id="card-section">
+          <div id="loading" class="loading-spinner">
+            <div class="spinner"></div>
+          </div>
+          <div class="slide-section" id="slide-section">
+            <div class="slider-container">
+              <div class="slider" id="slider-one">
+                <div class="slide">
+                  <img src="../../assets/Images/image1.jpg" alt="Food image" />
+                </div>
+                <div class="slide">
+                  <img src="../../assets/Images/image2.jpg" alt="Food image" />
+                </div>
+                <div class="slide">
+                  <img src="../../assets/Images/image3.jpg" alt="Food image" />
+                </div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider" id="slider-two">
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/asian-noodles.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/brazilian-food.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/delicious-meal.jpg"
+                    alt="Food image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider" id="slider-three">
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/eat-delicious.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/composition-meal.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/tasty-dish.jpg"
+                    alt="Food image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <div class="slider" id="slider-four">
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/roasted-lobster.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/sea-bass.jpg"
+                    alt="Food image"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../assets/Images/cooked-salmon.jpg"
+                    alt="Food image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="SearchPageScript.js"></script>
+  </body>
+</html>
